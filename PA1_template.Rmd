@@ -1,12 +1,6 @@
 ---
-title: "Reproducible Research: Peer Assessment 1"
-output: 
-  html_document:
-    keep_md: true
+title: 'Reproducible Research: Peer Assessment 1'
 ---
-```{r}
-knitr::opts_chunk$set(echo = TRUE)
-```
 
 ## Loading and preprocessing the data
 Loading and preprocessing the data
@@ -135,7 +129,7 @@ Create a new factor variable in the dataset with two levels - "weekday" and "wee
 file$daytype <- daytype
 file$daytype <- as.factor(file$daytype)
 
-StepsByDay <- aggregate(steps ~ interval + daytype, data = file, mean)
+stepsByDay <- aggregate(steps ~ interval + daytype, data = file, mean)
 names(stepsByDay) <- c("interval", "daytype", "steps")
 head(stepsByDay)
 ```
@@ -143,6 +137,7 @@ head(stepsByDay)
 Make a panel plot containing a time series plot (i.e. type = "l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis). See the README file in the GitHub repository to see an example of what this plot should look like using simulated data.
 
 ```{r Create Plot by DayType, echo=TRUE}
+library(lattice)
 xyplot(steps ~ interval | daytype, stepsByDay, type = "l", layout = c(1, 2), 
     xlab = "Interval", ylab = "Number of steps")
 ```
