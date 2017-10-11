@@ -4,8 +4,8 @@ output:
   html_document:
     keep_md: true
 ---
-```{r echo=FALSE}
-rmarkdown::render('PA1_template.Rmd', output_format = 'html_document')
+```{r}
+knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## Loading and preprocessing the data
