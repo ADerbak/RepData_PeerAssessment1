@@ -1,5 +1,7 @@
 ---
-title: 'Reproducible Research: Peer Assessment 1'
+Title: 'Reproducible Research: Peer Assessment 1'
+Output:
+  md_document: TRUE
 ---
 
 ## Loading and preprocessing the data
