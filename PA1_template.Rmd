@@ -1,7 +1,6 @@
 ---
 Title: 'Reproducible Research: Peer Assessment 1'
-Output:
-  md_document: TRUE
+output: html_document
 ---
 
 ## Loading and preprocessing the data
